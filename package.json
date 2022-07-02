@@ -60,7 +60,7 @@
     "jest": "28.1.1",
     "request": "2.88.2",
     "request-promise": "4.2.6",
-    "supertest": "6.2.3",
+    "supertest": "6.2.4",
     "ts-jest": "28.0.5",
     "ts-node": "10.8.1",
     "tsconfig-paths": "4.0.0",
