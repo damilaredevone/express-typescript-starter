@@ -5,4 +5,6 @@ const router = Router()
 
 router.use('/auth', authRoutes)
 
+router.use('/users', authRoutes)
+
 export default router

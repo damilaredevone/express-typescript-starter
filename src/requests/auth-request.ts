@@ -32,7 +32,7 @@ export const RegisterRequest = (
     lastname: 'required',
     phone: 'required|phone',
     email: 'required|email',
-    password: 'required|min: 6',
+    password: 'required|min:6',
   }
 
   const validator = new Validator(req.body, rules)

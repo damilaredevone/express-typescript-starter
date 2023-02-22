@@ -6,17 +6,15 @@ const Login = async (
   next: NextFunction,
 ): Promise<any> => {
   try {
-    const damilare = null
-    const error = 'damilare'
-    if (!damilare) await next(error)
+    return res.status(200).json({ data: true })
   } catch (error) {
     next(error)
   }
 }
 
-const Register = async (req: Request, res: Response): Promise<void> => {
+const Register = (req: Request, res: Response): any => {
   try {
-    return await res.json({})
+    return res.status(200).json({ data: true })
   } catch (error) {}
 }
 

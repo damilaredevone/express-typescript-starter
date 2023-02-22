@@ -1,8 +1,8 @@
 import { Request, Response } from 'express'
 
-const store = async (req: Request, res: Response): Promise<void> => {
+const store = (req: Request, res: Response): any => {
   try {
-    return await res.status(200).json({})
+    return res.status(200).json({})
   } catch (error) {}
 }
 

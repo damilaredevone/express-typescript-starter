@@ -16,6 +16,7 @@ type MongoOptions = {
 
 mongoose.Promise = global.Promise
 mongoose.set('debug', process.env.DEBUG !== undefined)
+mongoose.set('strictQuery', false)
 
 const options: MongoOptions = {
   useNewUrlParser: true,
@@ -33,19 +34,19 @@ class MongoConnection {
 
   private memoryServer?: MongoMemoryServer
 
-  static getInstance (): MongoConnection {
+  static getInstance(): MongoConnection {
     if (!MongoConnection._instance) {
       MongoConnection._instance = new MongoConnection()
     }
     return MongoConnection._instance
   }
 
-  public async open (): Promise<void> {
+  public async open(): Promise<void> {
     try {
       if (MONGODB_URI === 'inmemory') {
         logger.debug('connecting to inmemory db')
         this.memoryServer = new MongoMemoryServer()
-        const mongoURI = await this.memoryServer.getConnectionString()
+        const mongoURI = this.memoryServer.getUri()
         await mongoose.connect(mongoURI, { ...options })
       } else {
         logger.debug(`connecting to mongo db: ${MONGODB_URI}`)
@@ -70,7 +71,7 @@ class MongoConnection {
     }
   }
 
-  public async close (): Promise<void> {
+  public async close(): Promise<void> {
     try {
       await mongoose.disconnect()
       if (MONGODB_URI === 'inmemory') {
