@@ -1,14 +1,16 @@
-import { Router } from "express";
-import { errorResponse } from "../helpers/status";
+import type { Request, Response } from 'express'
+import { Router } from 'express'
+import { errorResponse } from '../helpers/status'
 import { LoginRequest } from '../requests/auth-request'
-import { Response, Request } from 'express'
 import { BASEURL } from '../config/secrets'
 import { Login } from '../controllers/user/auth-controller'
 
-const authRoutes = Router();
+const authRoutes = Router()
 
-authRoutes.post("/login", LoginRequest, Login);
+authRoutes.post('/login', LoginRequest, Login)
 
-authRoutes.get("/register", (req: Request, res: Response) => res.json(errorResponse(BASEURL)));
+authRoutes.get('/register', (req: Request, res: Response) =>
+  res.json(errorResponse(BASEURL)),
+)
 
-export default authRoutes;
+export default authRoutes

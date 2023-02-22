@@ -19,3 +19,5 @@ coverage
 # ignore logs
 debug.log
 errors.log
+
+.eslintcache

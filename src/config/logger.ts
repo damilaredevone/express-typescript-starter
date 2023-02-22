@@ -1,26 +1,26 @@
-import { LoggerOptions, createLogger, transports, format } from 'winston'
+import type { LoggerOptions } from 'winston'
+import { createLogger, format, transports } from 'winston'
 
 const options: LoggerOptions = {
-    transports: [
-        new transports.Console({
-            level: process.env.NODE_ENV === 'production' ? 'error' : 'debug'
-        }),
-        new transports.File({ filename: 'debug.log', level: 'debug' }),
+  transports: [
+    new transports.Console({
+      level: process.env.NODE_ENV === 'production' ? 'error' : 'debug',
+    }),
+    new transports.File({ filename: 'debug.log', level: 'debug' }),
 
-        new transports.File({ filename: 'errors.log', level: 'error' })
-    ]
+    new transports.File({ filename: 'errors.log', level: 'error' }),
+  ],
 }
 
 const logger = createLogger(options)
 
 if (process.env.NODE_ENV !== 'production') {
-    logger.add(new transports.Console({
-        format: format.combine(
-            format.colorize(),
-            format.json()
-        )
-    }));
-    logger.debug('Logging initialized at debug level')
+  logger.add(
+    new transports.Console({
+      format: format.combine(format.colorize(), format.json()),
+    }),
+  )
+  logger.debug('Logging initialized at debug level')
 }
 
 export default logger

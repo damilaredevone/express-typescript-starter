@@ -1,13 +1,9 @@
 import { Request, Response } from 'express'
 
 const store = async (req: Request, res: Response): Promise<void> => {
-    try {
-
-    } catch (error) {
-
-    }
+  try {
+    return await res.status(200).json({})
+  } catch (error) {}
 }
 
-export {
-    store
-}
+export { store }
