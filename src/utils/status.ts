@@ -1,18 +1,22 @@
 import type { ErrorResponse, SuccessResponse } from '@/types'
 
-enum status {
-  SUCCESS = 200,
+export enum StatusCode {
+  OK = 200,
   SERVER_ERROR = 500,
   UNAUTHORIZED = 401,
   NOT_FOUND = 404,
   CREATED = 201,
-  BAD = 400,
+  BAD_REQUEST = 400,
   NO_CONTENT = 204,
   CONFLICT = 209,
   UNPROCESSABLE = 422,
 }
 
-const successResponse = (data = {}, message = '', statusCode = status.SUCCESS): SuccessResponse => {
+export const successResponse = (
+  data = {},
+  message = '',
+  statusCode = StatusCode.OK,
+): SuccessResponse => {
   return {
     success: true,
     data,
@@ -21,10 +25,10 @@ const successResponse = (data = {}, message = '', statusCode = status.SUCCESS): 
   }
 }
 
-const errorResponse = (
+export const errorResponse = (
   error: any,
   message = 'Sorry, an error occured',
-  statusCode = status.BAD,
+  statusCode = StatusCode.BAD_REQUEST,
 ): ErrorResponse => {
   return {
     success: false,
@@ -33,5 +37,3 @@ const errorResponse = (
     status: statusCode,
   }
 }
-
-export { status, successResponse, errorResponse }

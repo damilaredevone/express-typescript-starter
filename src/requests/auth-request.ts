@@ -1,6 +1,6 @@
 import Validator from 'validatorjs'
 import type { NextFunction, Request, Response } from 'express'
-import { errorResponse, status } from '../helpers/status'
+import { errorResponse, status } from '../utils/status'
 import type { Rules } from '../types'
 
 export const LoginRequest = (req: Request, res: Response, next: NextFunction) => {

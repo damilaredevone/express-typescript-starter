@@ -1,11 +1,11 @@
-import type { Request, Response } from 'express'
+import type { Router as IRouter, Request, Response } from 'express'
 import { Router } from 'express'
-import { errorResponse } from '../helpers/status'
+import { errorResponse } from '../utils/status'
 import { LoginRequest } from '../requests/auth-request'
 import { BASEURL } from '../config/secrets'
-import { Login } from '../controllers/user/auth-controller'
+import { Login } from '../controllers/auth.controller'
 
-const authRoutes = Router()
+const authRoutes: IRouter = Router()
 
 authRoutes.post('/login', LoginRequest, Login)
 

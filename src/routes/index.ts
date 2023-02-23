@@ -1,10 +1,8 @@
-import { Router } from 'express'
-import authRoutes from './auth'
+import { type Router as IRouter, Router } from 'express'
+import authRoutes from './auth.route'
 
-const router = Router()
+const router: IRouter = Router()
 
 router.use('/auth', authRoutes)
-
-router.use('/users', authRoutes)
 
 export default router
