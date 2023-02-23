@@ -1,4 +1,4 @@
-import type { Request, Response } from 'express'
+import type { Express, Request, Response } from 'express'
 import express from 'express'
 import bodyParser from 'body-parser'
 import errorHandler from 'errorhandler'
@@ -8,7 +8,8 @@ import routes from './routes'
 import db from './config/db'
 import { ENVIROMENT, PORT } from './config/secrets'
 
-const app = express()
+const app: Express = express()
+
 const port = PORT || 5000
 
 app.use(

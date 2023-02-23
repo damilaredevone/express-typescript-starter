@@ -1,24 +1,33 @@
 {
-    "compilerOptions": {
-        "target": "ESNext",
-        "module": "commonjs",
-        "allowSyntheticDefaultImports": true,
-        "strict": true,
-        "esModuleInterop": true,
-        "noUnusedParameters": false,
-        "noUnusedLocals": true,
-        "assumeChangesOnlyAffectDirectDependencies": true,
-        "noFallthroughCasesInSwitch": true,
-        "rootDir": ".",
-        "outDir": "dist",
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["./src/*"],
-            "@@": ["./src"]
-         },
-    },
-    "include": [
-        "src/**/*.ts",
-        "tests/**/*",
-    ]
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "rootDir": ".",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@@": ["./src"],
+      "@middlewares/*": ["./src/middlewares/*"],
+      "@models/*": ["./src/models/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@services/*": ["./src/services/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@config/*": ["./src/config/*"],
+      "@controllers/*": ["./src/controllers/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "tests/**/*"]
 }
