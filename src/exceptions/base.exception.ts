@@ -1,4 +1,4 @@
-import { StatusCode } from '@/utils/status'
+import { StatusCode } from '@/utils'
 
 export class BaseError extends Error {
   public readonly name: string

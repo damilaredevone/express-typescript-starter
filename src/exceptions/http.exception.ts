@@ -1,5 +1,5 @@
 import { BaseError } from './base.exception'
-import { StatusCode } from '@/utils/status'
+import { StatusCode } from '@/utils'
 
 export class HttpException extends BaseError {
   constructor(
