@@ -1,17 +1,19 @@
 import type { Router as IRouter, Request, Response } from 'express'
 import { Router } from 'express'
-// import { errorResponse } from '../utils/status-code.utils'
-import { LoginRequest } from '../requests/auth.request'
-// import { BASEURL } from '../config/secrets'
-import { Login } from '../controllers/auth.controller'
-import { HttpException } from '@/exceptions'
+import { LoginRequest } from '@/requests/auth.request'
+import { AuthController } from '@/controllers/auth.controller'
+import { LoginDto } from '@/dtos/login.dto'
+// import { HttpException } from '@/exceptions'
+import { validateRequest } from '@/middlewares'
 
 const authRoutes: IRouter = Router()
 
-authRoutes.post('/login', LoginRequest, Login)
+const authController = new AuthController()
 
-authRoutes.get('/register', (req: Request, res: Response) => {
-  throw new HttpException('How are you')
-})
+authRoutes.post('/login', LoginRequest, authController.login)
+
+authRoutes.get('/register', validateRequest(LoginDto, 'body'), (req: Request, res: Response) =>
+  res.status(200).json({ data: true }),
+)
 
 export default authRoutes

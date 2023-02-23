@@ -3,8 +3,8 @@ import { Schema, model } from 'mongoose'
 import { compare, genSalt, hash } from 'bcrypt'
 
 type UserDocument = Document & {
-  firstname: string
-  lastname: string
+  first_name: string
+  last_name: string
   email: string
   phone: string
   password: string
@@ -16,8 +16,8 @@ export type IUser = UserDocument & {
 
 const userSchema = new Schema<UserDocument>(
   {
-    firstname: String,
-    lastname: String,
+    first_name: String,
+    last_name: String,
     email: {
       type: String,
       trim: true,
