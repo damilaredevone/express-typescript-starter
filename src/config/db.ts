@@ -41,7 +41,7 @@ class MongoConnection {
     return MongoConnection._instance
   }
 
-  public async open(): Promise<void> {
+  public async connect(): Promise<void> {
     try {
       if (MONGODB_URI === 'inmemory') {
         logger.debug('connecting to inmemory db')
