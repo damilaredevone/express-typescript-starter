@@ -4,8 +4,10 @@ import { ENVIROMENT, PORT } from '@config/secrets'
 import pc from 'picocolors'
 import db from '@config/db'
 import compression from 'compression'
+import helmet from 'helmet'
 import cors from 'cors'
 import errorHandler from 'errorhandler'
+import { ErrorInterceptor } from '@middlewares'
 import routes from './routes'
 
 export class App {
@@ -42,6 +44,7 @@ export class App {
 
   private initializeMiddlewares(): this {
     this.app.use(cors())
+    this.app.use(helmet())
     this.app.use(compression())
     this.app.use(express.json())
     this.app.use(express.urlencoded({ extended: true }))
@@ -50,6 +53,8 @@ export class App {
   }
 
   private initializeErrorHandling(): this {
+    this.app.use(ErrorInterceptor)
+
     if (ENVIROMENT === 'development') {
       this.app.use(errorHandler())
     }

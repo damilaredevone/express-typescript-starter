@@ -27,9 +27,11 @@
       "@services/*": ["./src/services/*"],
       "@utils/*": ["./src/utils/*"],
       "@config/*": ["./src/config/*"],
+      "@config": ["./src/config"],
       "@controllers/*": ["./src/controllers/*"],
       "@dtos/*": ["./src/dtos/*"],
-      "@exceptions/*": ["./src/exceptions/*"]
+      "@exceptions/*": ["./src/exceptions/*"],
+      "@middlewares": ["./src/middlewares"]
     }
   },
   "include": ["src/**/*.ts", "tests/**/*"]
