@@ -9,8 +9,6 @@ const authRoutes = Router()
 
 authRoutes.post('/login', LoginRequest, Login)
 
-authRoutes.get('/register', (req: Request, res: Response) =>
-  res.json(errorResponse(BASEURL)),
-)
+authRoutes.get('/register', (req: Request, res: Response) => res.json(errorResponse(BASEURL)))
 
 export default authRoutes

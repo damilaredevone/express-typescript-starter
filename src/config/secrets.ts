@@ -11,9 +11,7 @@ const production = ENVIROMENT === 'production'
 
 export const SECRET: string | undefined = process.env.SECRET
 
-export const MONGODB_URI: any = production
-  ? process.env.MONGODB_URI
-  : process.env.MONGODB_URI_LOCAL
+export const MONGODB_URI: any = production ? process.env.MONGODB_URI : process.env.MONGODB_URI_LOCAL
 export const MONGO_CREATE_INDEX = process.env.MONGO_CREATE_INDEX
 export const MONGO_AUTO_INDEX = process.env.MONGO_AUTO_INDEX
 

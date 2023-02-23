@@ -3,7 +3,7 @@ module.exports = {
   trailingComma: 'all',
   singleQuote: true,
   tabWidth: 2,
-  printWidth: 83,
+  printWidth: 100,
   overrides: [
     {
       files: ['*.yml'],

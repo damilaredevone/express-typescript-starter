@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "ESNext",
         "module": "commonjs",
         "allowSyntheticDefaultImports": true,
         "strict": true,
@@ -11,9 +11,10 @@
         "noFallthroughCasesInSwitch": true,
         "rootDir": ".",
         "outDir": "dist",
-        "baseUrl": "src",
+        "baseUrl": ".",
         "paths": {
-            "@/*": ["src/*"],
+            "@/*": ["./src/*"],
+            "@@": ["./src"]
          },
     },
     "include": [

@@ -5,12 +5,7 @@ class BaseError extends Error {
   public readonly statusCode: status
   public readonly isOperational: boolean
 
-  constructor (
-    name: string,
-    statusCode: status,
-    message: string,
-    isOperational: boolean,
-  ) {
+  constructor(name: string, statusCode: status, message: string, isOperational: boolean) {
     super(message)
     Object.setPrototypeOf(this, new.target.prototype)
     this.name = name
@@ -22,7 +17,7 @@ class BaseError extends Error {
 }
 
 class ErrorResponse extends BaseError {
-  constructor (
+  constructor(
     name: string,
     statusCode = status.SERVER_ERROR,
     message = 'Internal Server Error',

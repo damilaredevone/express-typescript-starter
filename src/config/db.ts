@@ -58,10 +58,7 @@ class MongoConnection {
         mongoose.connection.on('error', (error) => {
           logger.error(`Mongo: ${error.toString()}`)
           if (error.name === 'MongoNetworkError') {
-            setTimeout(
-              () => mongoose.connect(MONGODB_URI, options).catch(() => {}),
-              5000,
-            )
+            setTimeout(() => mongoose.connect(MONGODB_URI, options).catch(() => {}), 5000)
           }
         })
       }
@@ -73,6 +70,7 @@ class MongoConnection {
 
   public async close(): Promise<void> {
     try {
+      // closing the database connection instance
       await mongoose.disconnect()
       if (MONGODB_URI === 'inmemory') {
         await this.memoryServer!.stop()

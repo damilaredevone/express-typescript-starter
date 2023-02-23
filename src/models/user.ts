@@ -47,9 +47,7 @@ userSchema.pre<UserDocument>('save', function (next): void {
   }
 })
 
-userSchema.methods.comparePassword = function (
-  candidatePassword: string,
-): Promise<boolean> {
+userSchema.methods.comparePassword = function (candidatePassword: string): Promise<boolean> {
   const { password }: UserDocument = this
   return new Promise(function (resolve, reject) {
     compare(candidatePassword, password, function (err: Error, isMatch: boolean) {

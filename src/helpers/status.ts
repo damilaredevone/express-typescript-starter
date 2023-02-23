@@ -1,4 +1,4 @@
-import type { ErrorResponse, SuccessResponse } from 'types'
+import type { ErrorResponse, SuccessResponse } from '@/types'
 
 enum status {
   SUCCESS = 200,
@@ -12,11 +12,7 @@ enum status {
   UNPROCESSABLE = 422,
 }
 
-const successResponse = (
-  data = {},
-  message = '',
-  statusCode = status.SUCCESS,
-): SuccessResponse => {
+const successResponse = (data = {}, message = '', statusCode = status.SUCCESS): SuccessResponse => {
   return {
     success: true,
     data,

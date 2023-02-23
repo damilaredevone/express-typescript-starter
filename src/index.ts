@@ -37,8 +37,6 @@ app.use('*', (req: Request, res: Response) => {
   })
 })
 
-app.listen(port, () =>
-  console.log(`app listening on port ${port} in ${ENVIROMENT}`),
-)
+app.listen(port, () => console.log(`app listening on port ${port} in ${ENVIROMENT}`))
 
 export default app

@@ -13,20 +13,12 @@ export const LoginRequest = (req: Request, res: Response, next: NextFunction) =>
   validator.passes(() => next())
   validator.fails(() => {
     return res.json(
-      errorResponse(
-        validator.errors.all(),
-        'Invalid Form Data',
-        status.UNPROCESSABLE,
-      ),
+      errorResponse(validator.errors.all(), 'Invalid Form Data', status.UNPROCESSABLE),
     )
   })
 }
 
-export const RegisterRequest = (
-  req: Request,
-  res: Response,
-  next: NextFunction,
-) => {
+export const RegisterRequest = (req: Request, res: Response, next: NextFunction) => {
   const rules: Rules = {
     firstname: 'required',
     lastname: 'required',
@@ -38,12 +30,6 @@ export const RegisterRequest = (
   const validator = new Validator(req.body, rules)
   validator.passes(() => next())
   validator.fails(() => {
-    return res.json(
-      errorResponse(
-        validator.errors.all(),
-        'validation erorr',
-        status.UNPROCESSABLE,
-      ),
-    )
+    return res.json(errorResponse(validator.errors.all(), 'validation erorr', status.UNPROCESSABLE))
   })
 }
