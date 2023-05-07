@@ -57,7 +57,7 @@
     "mongodb-memory-server": "^8.0.0",
     "picocolors": "^1.0.0",
     "pm2": "^5.2.2",
-    "pnpm": "^7.27.1",
+    "pnpm": "^8.0.0",
     "prettier": "^2.8.4",
     "simple-git-hooks": "^2.8.1",
     "supertest": "6.3.3",
