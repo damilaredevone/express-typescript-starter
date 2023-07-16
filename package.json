@@ -36,7 +36,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@damilaredev/eslint-config": "^0.0.18",
+    "@damilaredev/eslint-config": "^0.0.19",
     "@types/bcrypt": "^5.0.0",
     "@types/body-parser": "1.19.2",
     "@types/compression": "1.7.2",
