@@ -38,7 +38,7 @@
   "devDependencies": {
     "@damilaredev/eslint-config": "^0.0.19",
     "@types/bcrypt": "^5.0.0",
-    "@types/body-parser": "1.19.2",
+    "@types/body-parser": "1.19.5",
     "@types/compression": "1.7.2",
     "@types/cors": "2.8.13",
     "@types/errorhandler": "1.5.0",

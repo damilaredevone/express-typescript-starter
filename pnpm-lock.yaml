@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@damilaredev/eslint-config': ^0.0.19
   '@types/bcrypt': ^5.0.0
-  '@types/body-parser': 1.19.2
+  '@types/body-parser': 1.19.5
   '@types/compression': 1.7.2
   '@types/cors': 2.8.13
   '@types/errorhandler': 1.5.0
@@ -66,7 +66,7 @@ dependencies:
 devDependencies:
   '@damilaredev/eslint-config': 0.0.19_n5rqpfl4r7ysnvhb4s5lto7qde
   '@types/bcrypt': 5.0.0
-  '@types/body-parser': 1.19.2
+  '@types/body-parser': 1.19.5
   '@types/compression': 1.7.2
   '@types/cors': 2.8.13
   '@types/errorhandler': 1.5.0
@@ -1899,8 +1899,8 @@ packages:
       '@types/node': 18.16.19
     dev: true
 
-  /@types/body-parser/1.19.2:
-    resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
+  /@types/body-parser/1.19.5:
+    resolution: {integrity: sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg==}
     dependencies:
       '@types/connect': 3.4.35
       '@types/node': 18.16.19
@@ -1945,7 +1945,7 @@ packages:
   /@types/express/4.17.17:
     resolution: {integrity: sha512-Q4FmmuLGBG58btUnfS1c1r/NQdlp3DMfGDGig8WhfpA2YRUtEkxAjkZb0yvplJGYdF1fsQ81iMDcH24sSCNC/Q==}
     dependencies:
-      '@types/body-parser': 1.19.2
+      '@types/body-parser': 1.19.5
       '@types/express-serve-static-core': 4.17.33
       '@types/qs': 6.9.7
       '@types/serve-static': 1.15.0
