@@ -7,7 +7,7 @@ specifiers:
   '@types/compression': 1.7.2
   '@types/cors': 2.8.13
   '@types/errorhandler': 1.5.0
-  '@types/express': 4.17.17
+  '@types/express': 4.17.21
   '@types/faker': 6.6.8
   '@types/jest': 29.4.0
   '@types/jsonwebtoken': ^9.0.1
@@ -70,7 +70,7 @@ devDependencies:
   '@types/compression': 1.7.2
   '@types/cors': 2.8.13
   '@types/errorhandler': 1.5.0
-  '@types/express': 4.17.17
+  '@types/express': 4.17.21
   '@types/faker': 6.6.8
   '@types/jest': 29.4.0
   '@types/jsonwebtoken': 9.0.1
@@ -1909,7 +1909,7 @@ packages:
   /@types/compression/1.7.2:
     resolution: {integrity: sha512-lwEL4M/uAGWngWFLSG87ZDr2kLrbuR8p7X+QZB1OQlT+qkHsCPDVFnHPyXf4Vyl4yDDorNY+mAhosxkCvppatg==}
     dependencies:
-      '@types/express': 4.17.17
+      '@types/express': 4.17.21
     dev: true
 
   /@types/connect/3.4.35:
@@ -1931,7 +1931,7 @@ packages:
   /@types/errorhandler/1.5.0:
     resolution: {integrity: sha512-g5jrn2aofEn7O2OW/T+PlmGUUD/AtrX7DI87zrxz6rK5XIyvQf3FbPJrwgYaVjVOaCyvEkx9yxLd/XlEA43OcA==}
     dependencies:
-      '@types/express': 4.17.17
+      '@types/express': 4.17.21
     dev: true
 
   /@types/express-serve-static-core/4.17.33:
@@ -1942,8 +1942,8 @@ packages:
       '@types/range-parser': 1.2.4
     dev: true
 
-  /@types/express/4.17.17:
-    resolution: {integrity: sha512-Q4FmmuLGBG58btUnfS1c1r/NQdlp3DMfGDGig8WhfpA2YRUtEkxAjkZb0yvplJGYdF1fsQ81iMDcH24sSCNC/Q==}
+  /@types/express/4.17.21:
+    resolution: {integrity: sha512-ejlPM315qwLpaQlQDTjPdsUFSc6ZsP4AN6AlWnogPjQ7CVi7PYF3YVz+CY3jE2pwYf7E/7HlDAN0rV2GxTG0HQ==}
     dependencies:
       '@types/body-parser': 1.19.2
       '@types/express-serve-static-core': 4.17.33
