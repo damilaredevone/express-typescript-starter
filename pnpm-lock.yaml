@@ -4,7 +4,7 @@ specifiers:
   '@damilaredev/eslint-config': ^0.0.19
   '@types/bcrypt': ^5.0.0
   '@types/body-parser': 1.19.2
-  '@types/compression': 1.7.2
+  '@types/compression': 1.7.5
   '@types/cors': 2.8.13
   '@types/errorhandler': 1.5.0
   '@types/express': 4.17.17
@@ -67,7 +67,7 @@ devDependencies:
   '@damilaredev/eslint-config': 0.0.19_n5rqpfl4r7ysnvhb4s5lto7qde
   '@types/bcrypt': 5.0.0
   '@types/body-parser': 1.19.2
-  '@types/compression': 1.7.2
+  '@types/compression': 1.7.5
   '@types/cors': 2.8.13
   '@types/errorhandler': 1.5.0
   '@types/express': 4.17.17
@@ -1906,8 +1906,8 @@ packages:
       '@types/node': 18.16.19
     dev: true
 
-  /@types/compression/1.7.2:
-    resolution: {integrity: sha512-lwEL4M/uAGWngWFLSG87ZDr2kLrbuR8p7X+QZB1OQlT+qkHsCPDVFnHPyXf4Vyl4yDDorNY+mAhosxkCvppatg==}
+  /@types/compression/1.7.5:
+    resolution: {integrity: sha512-AAQvK5pxMpaT+nDvhHrsBhLSYG5yQdtkaJE1WYieSNY2mVFKAgmU4ks65rkZD5oqnGCFLyQpUr1CqI4DmUMyDg==}
     dependencies:
       '@types/express': 4.17.17
     dev: true
