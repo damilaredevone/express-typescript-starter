@@ -5,7 +5,7 @@ specifiers:
   '@types/bcrypt': ^5.0.0
   '@types/body-parser': 1.19.2
   '@types/compression': 1.7.2
-  '@types/cors': 2.8.13
+  '@types/cors': 2.8.17
   '@types/errorhandler': 1.5.0
   '@types/express': 4.17.17
   '@types/faker': 6.6.8
@@ -68,7 +68,7 @@ devDependencies:
   '@types/bcrypt': 5.0.0
   '@types/body-parser': 1.19.2
   '@types/compression': 1.7.2
-  '@types/cors': 2.8.13
+  '@types/cors': 2.8.17
   '@types/errorhandler': 1.5.0
   '@types/express': 4.17.17
   '@types/faker': 6.6.8
@@ -1922,8 +1922,8 @@ packages:
     resolution: {integrity: sha512-t73xJJrvdTjXrn4jLS9VSGRbz0nUY3cl2DMGDU48lKl+HR9dbbjW2A9r3g40VA++mQpy6uuHg33gy7du2BKpog==}
     dev: true
 
-  /@types/cors/2.8.13:
-    resolution: {integrity: sha512-RG8AStHlUiV5ysZQKq97copd2UmVYw3/pRMLefISZ3S1hK104Cwm7iLQ3fTKx+lsUH2CE8FlLaYeEA2LSeqYUA==}
+  /@types/cors/2.8.17:
+    resolution: {integrity: sha512-8CGDvrBj1zgo2qE+oS3pOCyYNqCPryMWY2bGfwA0dcfopWGgxs+78df0Rs3rc9THP4JkOhLsAa+15VdpAqkcUA==}
     dependencies:
       '@types/node': 18.16.19
     dev: true
